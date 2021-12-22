@@ -1,0 +1,16 @@
+[Unit]
+Description=OdooTHINMART
+Requires=postgresql.service
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+SyslogIdentifier=odoo12
+PermissionsStartOnly=true
+User=odoo12
+Group=odoo12
+ExecStart=/opt/odoo12/THINMART/odoo-venv/bin/python3 /opt/odoo12/THINMART/odoo/odoo-bin -c /etc/odoothinmart.conf
+StandardOutput=journal+console
+
+[Install]
+WantedBy=multi-user.target

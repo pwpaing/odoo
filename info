@@ -1,0 +1,2 @@
+#Step1 >>> sudo scp -r default_repo/ DFFM
+#Step2 >>> sudo zip -r odoo-venv.zip odoo-venv/
